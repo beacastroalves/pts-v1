@@ -1,0 +1,72 @@
+@media (min-width: 480px) {
+  #solutions {
+    .content-wrapper {
+      .main-heading {
+        font-size: 2em;
+      }
+
+      .sub-heading {
+        font-size: 1.2em;
+      }
+
+      .problem-list-card {
+        .bullet-list li {
+          font-size: 1.05em;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  #solutions {
+    padding: 60px 20px;
+
+    .content-wrapper {
+      max-width: 1080px;
+
+      .main-heading {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      .sub-heading {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+      }
+
+      .problem-list-card {
+        padding: 30px;
+        margin-top: 40px;
+
+        .card-heading {
+          font-size: 1.5em;
+          margin-bottom: 20px;
+        }
+
+        .bullet-list li {
+          font-size: 1.1em;
+          margin-bottom: 15px;
+          padding-left: 30px;
+
+          &::before {
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #solutions {
+    .content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+  }
+}
