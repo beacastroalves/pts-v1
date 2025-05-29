@@ -1,5 +1,5 @@
 @media (min-width: 480px) {
-  #solutions {
+/* #solutions {
     .content-wrapper {
       .main-heading {
         font-size: 2em;
@@ -16,6 +16,36 @@
         }
       }
     }
+  } */
+
+  #solutions {
+    .content-wrapper {
+      .main-heading {
+        font-size: 2em;
+      }
+
+      .sub-heading {
+        font-size: 1.2em;
+      }
+
+      .problem-list-card {
+        .bullet-list {
+          padding: 0 24px 24px 24px;
+          gap: 20px;
+
+          li {
+            font-size: 1.05em;
+            padding: 20px 24px;
+            padding-left: 60px
+
+          }
+
+          li::before {
+            left: 20px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -23,7 +53,7 @@
 @media (min-width: 768px) {
   main {
     section {
-      &#solutions {
+      /* &#solutions {
         padding: 80px 20px;
 
         .content-wrapper {
@@ -39,7 +69,67 @@
             margin-bottom: 16px;
           }
         }
+      } */
+
+      &#solutions {
+        padding: 80px 20px;
+
+        .content-wrapper {
+          padding: 0;
+
+          .heading {
+            margin-bottom: 60px;
+
+            .main-heading {
+              font-size: 2.5em;
+              margin-bottom: 24px;
+            }
+
+            .sub-heading {
+              font-size: 1.3em;
+              margin-bottom: 16px;
+            }
+          }
+
+          .problem-list-card {
+            padding: 0;
+            border-radius: 20px;
+            box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.25);
+            background-color: rgba(var(--app-color-2-rgb), 0.1);
+            overflow: hidden;
+
+            .card-heading {
+              font-size: 1.6em;
+              margin-bottom: 24px;
+              padding: 20px 30px;
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+            }
+
+            .bullet-list {
+              padding: 0 30px 30px 30px;
+              gap: 24px;
+            }
+
+            .bullet-list li {
+              font-size: 1.125em;
+              padding: 20px 30px;
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              padding-left: 60px;
+            }
+
+            .bullet-list li::before {
+              width: 28px;
+              height: 28px;
+              left: 20px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+        }
       }
+
 
       &#pts {
         padding: 80px 64px;
@@ -119,30 +209,20 @@
           justify-content: center;
           gap: 64px;
 
+          .heading {
+            flex: 1;
+            text-align: left;
+            margin-bottom: 0;
+          }
 
           .problem-list-card {
-            padding: 32px;
-            margin-top: 40px;
-
-            .card-heading {
-              font-size: 1.6em;
-              margin-bottom: 20px;
-            }
-
-            .bullet-list li {
-              font-size: 1.125em;
-              margin-bottom: 16px;
-              padding-left: 36px;
-
-              &::before {
-                width: 28px;
-                height: 28px;
-                top: 0px;
-              }
-            }
+            flex: 1;
+            max-width: 600px;
+            margin-top: 0;
           }
         }
       }
+
 
       &#pts {
         .pts-content-wrapper {
