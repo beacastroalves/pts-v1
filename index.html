@@ -10,7 +10,7 @@
 </head>
 <body>
   <main>
-    <section>
+    <section class="pts-1">
       <div>
         <h1><span>POR TRÁS DA SESSÃO</span> — O EVENTO QUE VAI TE MOSTRAR O QUE NINGUÉM TE ENSINOU SOBRE SER PSICÓLOGA NA VIDA REAL.</h1>
         <h3>Porque atuar como psicóloga vai muito além da sessão.</h3>
@@ -30,48 +30,72 @@
         <div class="problem-list-card">
           <h3 class="card-heading">Se você sente que:</h3>
           <ul class="bullet-list">
-              <li>Ninguém te ensinou a gerir seu consultório como um negócio.</li>
-              <li>Falar de dinheiro, marketing e posicionamento profissional ainda gera desconforto.</li>
-              <li>Seu raciocínio clínico, às vezes, parece nebuloso, pouco estruturado.</li>
-              <li>Se sente sozinha na profissão, sem uma rede de apoio, sem troca, sem acolhimento... <span>Então, esse evento é seu lugar.</span></li>
+            <li class="hidden-item">Ninguém te ensinou a gerir seu consultório como um negócio.</li>
+            <li class="hidden-item">Falar de dinheiro, marketing e posicionamento profissional ainda gera desconforto.</li>
+            <li class="hidden-item">Seu raciocínio clínico, às vezes, parece nebuloso, pouco estruturado.</li>
+            <li class="hidden-item">Se sente sozinha na profissão, sem uma rede de apoio, sem troca, sem acolhimento... <span class="highlight">Então, esse evento é seu lugar.</span></li>
           </ul>
         </div>
       </div>
     </section>
-    <section>
-      <div>
-        <h1><span>POR TRÁS DA SESSÃO</span> — O EVENTO PRESENCIAL QUE VAI TE MOSTRAR OS BASTIDORES REAIS DA PRÁTICA CLÍNICA E DO EMPREENDEDORISMO EM PSICOLOGIA.</h1>
-        <h3>Porque tão importante quanto saber o que fazer na sessão, é saber como cuidar da sua carreira, do seu consultório e da sua vida profissional.</h3>
+
+    <section id="pts">
+      <div class="pts-content-wrapper">
+        <div class="pts-text-container">
+          <h1><span>POR TRÁS DA SESSÃO</span> — O EVENTO PRESENCIAL QUE VAI TE MOSTRAR OS BASTIDORES REAIS DA PRÁTICA CLÍNICA E DO EMPREENDEDORISMO EM PSICOLOGIA.</h1>
+          <h3>Porque tão importante quanto saber o que fazer na sessão, é saber como cuidar da sua carreira, do seu consultório e da sua vida profissional.</h3>
+        </div>
+        <div class="pts-image-container">
+            <img src="./assets/images/3d-curve.jpeg" alt="Imagem do evento Por Trás da Sessão">
+        </div>
       </div>
     </section>
-    <section id="cards">
+
+    <section id="timeline-section">
       <h2>O QUE VAMOS CONSTRUIR JUNTAS</h2>
-      <div class="card-list">
-        <div class="card-text">
-          <ion-icon name="git-network-outline"></ion-icon>
-          <h3>Conexão & Networking</h3>
-          <p>Chega de se sentir sozinha na profissão. Aqui, você vai construir pontes, se fortalecer e trocar experiências com psicólogas que estão na mesma caminhada que você.</p>
-        </div>
-        <div class="card-text">
-          <!-- <ion-icon name="clipboard-outline"></ion-icon> -->
-          <ion-icon name="chatbubbles-outline"></ion-icon>
-          <h3>Ciência Aplicada à Prática</h3>
-          <p>Sem achismos, sem modismos. Vamos falar de psicologia baseada em evidências e de como isso impacta sua prática diária.</p>
-        </div>
-        <div class="card-text">
-          <ion-icon name="bulb-outline"></ion-icon>
-          <h3>Raciocínio Clínico</h3>
-          <p>Mais segurança, mais clareza e mais consistência nas suas intervenções. Porque quem pensa melhor, atende melhor.</p>
-        </div>
-        <div class="card-text">
-          <ion-icon name="cash-outline"></ion-icon>
-          <h3>Gestão Financeira para Psicólogas</h3>
-          <p>Você não vive de amor à profissão. Aqui, vamos falar de dinheiro sem tabu: precificação, organização financeira e sustentabilidade do consultório.</p>
-        </div>
-        <div class="card-text">
-          <ion-icon name="bar-chart-outline"></ion-icon>
-          <h3>Marketing e Posicionamento Ético</h3>
-          <p>Sim, é possível se divulgar, se posicionar e comunicar seu valor — sem ferir a ética e sem se sentir desconfortável.</p>
+      <div class="timeline-container">
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+          <div class="timeline-line-fill"></div>
+          <div class="timeline-item left">
+            <div class="timeline-content card-text">
+              <ion-icon name="git-network-outline"></ion-icon>
+              <h3>Conexão & Networking</h3>
+              <p>Chega de se sentir sozinha na profissão. Aqui, você vai construir pontes, se fortalecer e trocar experiências com psicólogas que estão na mesma caminhada que você.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-content card-text">
+              <ion-icon name="chatbubbles-outline"></ion-icon>
+              <h3>Ciência Aplicada à Prática</h3>
+              <p>Sem achismos, sem modismos. Vamos falar de psicologia baseada em evidências e de como isso impacta sua prática diária.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-content card-text">
+              <ion-icon name="bulb-outline"></ion-icon>
+              <h3>Raciocínio Clínico</h3>
+              <p>Mais segurança, mais clareza e mais consistência nas suas intervenções. Porque quem pensa melhor, atende melhor.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item right">
+            <div class="timeline-content card-text">
+              <ion-icon name="cash-outline"></ion-icon>
+              <h3>Gestão Financeira para Psicólogas</h3>
+              <p>Você não vive de amor à profissão. Aqui, vamos falar de dinheiro sem tabu: precificação, organização financeira e sustentabilidade do consultório.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item left">
+            <div class="timeline-content card-text">
+              <ion-icon name="bar-chart-outline"></ion-icon>
+              <h3>Marketing e Posicionamento Ético</h3>
+              <p>Sim, é possível se divulgar, se posicionar e comunicar seu valor — sem ferir a ética e sem se sentir desconfortável.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -91,6 +115,7 @@
         </ul>
       </div>
     </section>
+
     <section>
       <div>
         <h1>O que você vai levar desse dia?</h1>
@@ -104,6 +129,7 @@
         </ul>
       </div>
     </section>
+
     <section>
       <div>
         <h1>Informações relevantes</h1>
@@ -116,59 +142,60 @@
       </div>
     </section>
 
-  <section>
-    <div>
-      <h1>O que quem já viveu essa experiência tem a dizer</h1>
-      <!-- Faixa de estrelas avaliações -->
-      <!-- Slide de feedbacks com foto da psicóloga (opcional) + texto Nome + depoimento em texto curto (frase forte e humana) -->
-    </div>
-  </section>
+    <section>
+      <div>
+        <h1>O que quem já viveu essa experiência tem a dizer</h1>
+        <!-- Faixa de estrelas avaliações -->
+        <!-- Slide de feedbacks com foto da psicóloga (opcional) + texto Nome + depoimento em texto curto (frase forte e humana) -->
+      </div>
+    </section>
 
-  <section>
-    <div>
-      <h1>VOCÊ NÃO PRECISA DAR CONTA DE TUDO SOZINHA.”</h1>
-      <h3>Porque a psicóloga que você é na sessão começa muito antes dela — e vai muito além também.</h3>
-      <button type="button">QUERO GARANTIR MINHA VAGA NO PTS</button>
-      <p>Porque crescer sozinha é possível. Mas <span>crescer acompanhada é mais leve, mais rápido e muito mais potente.</span></p>
-    </div>
-  </section>
+    <section>
+      <div>
+        <h1>VOCÊ NÃO PRECISA DAR CONTA DE TUDO SOZINHA.”</h1>
+        <h3>Porque a psicóloga que você é na sessão começa muito antes dela — e vai muito além também.</h3>
+        <button type="button">QUERO GARANTIR MINHA VAGA NO PTS</button>
+        <p>Porque crescer sozinha é possível. Mas <span>crescer acompanhada é mais leve, mais rápido e muito mais potente.</span></p>
+      </div>
+    </section>
 
-  <section>
-    <h3>Ingresso PTS</h3>
-    <ul>
-      <li>✔️ Ingresso para acesso aos dois dias de evento.</li>
-    </ul>
-  </section>
+    <section>
+      <h3>Ingresso PTS</h3>
+      <ul>
+        <li>✔️ Ingresso para acesso aos dois dias de evento.</li>
+      </ul>
+    </section>
 
-  <section>
-    <h3>Palestrantes</h3>
-    <!-- slide com os cards de cada palestrante -->
-  </section>
+    <section>
+      <h3>Palestrantes</h3>
+      <!-- slide com os cards de cada palestrante -->
+    </section>
 
-  <section>
-    <h3>Perguntas Frequentes</h3>
-    <ul>
-      <li>
-        <p>O Por Trás da Sessão é para mim?</p>
-        <p>Resposta</p>
-      </li>
-      <li>
-        <p>Quais serão os horários do evento?</p>
-        <p>Resposta</p>
-      </li>
-      <li>
-        <p>Onde vai acontecer?</p>
-        <p>Resposta</p>
-      </li>
-      <li>
-        <p>A alimentação está inclusa?</p>
-        <p>Resposta</p>
-      </li>
-    </ul>
-  </section>
+    <section>
+      <h3>Perguntas Frequentes</h3>
+      <ul>
+        <li>
+          <p>O Por Trás da Sessão é para mim?</p>
+          <p>Resposta</p>
+        </li>
+        <li>
+          <p>Quais serão os horários do evento?</p>
+          <p>Resposta</p>
+        </li>
+        <li>
+          <p>Onde vai acontecer?</p>
+          <p>Resposta</p>
+        </li>
+        <li>
+          <p>A alimentação está inclusa?</p>
+          <p>Resposta</p>
+        </li>
+      </ul>
+    </section>
   </main>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>

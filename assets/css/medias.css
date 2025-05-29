@@ -21,38 +21,86 @@
 
 
 @media (min-width: 768px) {
-  #solutions {
-    padding: 60px 20px;
+  main {
+    section {
+      &#solutions {
+        padding: 80px 20px;
 
-    .content-wrapper {
-      max-width: 1080px;
+        .content-wrapper {
+          padding: 32px;
 
-      .main-heading {
-        font-size: 2.5em;
-        margin-bottom: 20px;
+          .main-heading {
+            font-size: 2.5em;
+            margin-bottom: 24px;
+          }
+
+          .sub-heading {
+            font-size: 1.3em;
+            margin-bottom: 16px;
+          }
+        }
       }
 
-      .sub-heading {
-        font-size: 1.3em;
-        margin-bottom: 15px;
+      &#pts {
+        padding: 80px 64px;
       }
 
-      .problem-list-card {
-        padding: 30px;
-        margin-top: 40px;
-
-        .card-heading {
-          font-size: 1.5em;
-          margin-bottom: 20px;
+      &#timeline-section {
+        h2 {
+            font-size: 2.5em;
         }
 
-        .bullet-list li {
-          font-size: 1.1em;
-          margin-bottom: 15px;
-          padding-left: 30px;
+        .timeline-container {
+          .timeline-wrapper {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
 
-          &::before {
-            top: 5px;
+            .timeline-line {
+              left: 50%;
+              transform: translateX(-50%);
+            }
+
+            .timeline-line-fill {
+              left: 50%;
+              transform: translate(-50%);
+            }
+
+            .timeline-item {
+              position: relative;
+              width: 50%;
+              padding: 0;
+
+              &:first-child {
+                margin-top: 32px;
+              }
+            }
+
+            .timeline-item.left {
+              align-self: flex-start;
+
+              margin: 0;
+
+              .timeline-content {
+                margin-right: 40px;
+                text-align: right;
+              }
+
+              &:last-child {
+                margin-bottom: 64px;
+              }
+            }
+
+            .timeline-item.right {
+              align-self: flex-end;
+              margin: 0;
+
+              .timeline-content {
+                margin-left: 40px;
+              }
+            }
           }
         }
       }
@@ -60,13 +108,77 @@
   }
 }
 
-@media (min-width: 768px) {
-  #solutions {
-    .content-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 32px;
+
+@media (min-width: 1024px) {
+  main {
+    section {
+      &#solutions {
+        .content-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 64px;
+
+
+          .problem-list-card {
+            padding: 32px;
+            margin-top: 40px;
+
+            .card-heading {
+              font-size: 1.6em;
+              margin-bottom: 20px;
+            }
+
+            .bullet-list li {
+              font-size: 1.125em;
+              margin-bottom: 16px;
+              padding-left: 36px;
+
+              &::before {
+                width: 28px;
+                height: 28px;
+                top: 0px;
+              }
+            }
+          }
+        }
+      }
+
+      &#pts {
+        .pts-content-wrapper {
+          flex-direction: row;
+          text-align: left;
+          align-items: center;
+          gap: 64px;
+
+          .pts-text-container,
+          .pts-image-container {
+            flex: 1;
+            padding: 0;
+          }
+
+          .pts-text-container {
+            h1 {
+              font-size: 2.5em;
+            }
+
+            h3 {
+              font-size: 1.3em;
+            }
+          }
+
+          .pts-image-container {
+            img {
+              border-radius: 24px;
+              clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+            }
+          }
+        }
+
+        &::after {
+          background: linear-gradient(0deg,rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 15%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.2) 100%);
+        }
+      }
     }
   }
 }
