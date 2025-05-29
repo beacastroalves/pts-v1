@@ -34,10 +34,74 @@ main {
     height: 100%;
     padding: 16px;
 
-    &.pts-1 {
-      height: 80vh;
+    &#pts-first {
+      position: relative; /* Essencial para posicionar o carrossel de fundo */
+      height: 100vh; /* Faz a seção ocupar a altura total da tela */
       display: flex;
       justify-content: center;
+      align-items: center;
+      overflow: hidden; /* Garante que o carrossel não vaze */
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--app-color-3); /* Cor do texto principal (creme) */
+
+      .background-carousel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300%; /* Três imagens, cada uma 100% da largura, então 300% */
+        height: 100%;
+        display: flex; /* Para as imagens ficarem lado a lado */
+        animation: carousel-slide 40s linear infinite; /* Animação: 30s, linear, infinita */
+        z-index: 1; /* Abaixo do conteúdo principal */
+
+        img {
+          width: 33.333%; /* Cada imagem ocupa 1/3 da largura total do carrossel */
+          height: 100%;
+          object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+          display: block;
+        }
+      }
+
+      .content-overlay {
+        position: relative; /* Permite z-index */
+        z-index: 2; /* Acima do carrossel de fundo */
+        background-color: rgba(var(--app-color-2-rgb), 0.7); /* Overlay vinho semi-transparente para legibilidade */
+        padding: 30px 20px;
+        border-radius: 15px;
+        max-width: 900px; /* Limita a largura do conteúdo */
+        margin: 0 20px; /* Margem lateral em mobile */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra para destacar o conteúdo */
+        height: 80vh;
+
+        h1 {
+          font-size: 1.8em; /* Ajuste para mobile */
+          line-height: 1.3;
+          margin-bottom: 20px;
+          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra para o texto para melhor contraste */
+
+          span {
+            color: var(--app-color-1); /* Destaque dourado */
+            font-weight: bold;
+          }
+        }
+
+        h3 {
+          font-size: 1em; /* Ajuste para mobile */
+          line-height: 1.5;
+          margin-bottom: 15px;
+          opacity: 0.9;
+        }
+
+        h3:last-of-type { /* Margem apenas no último subtítulo antes do botão */
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    &#pts-1 {
+      height: 80vh;
+      width: 100%;
     }
 
     /* &#solutions {
@@ -142,7 +206,7 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('../images/3d-curve.jpeg');
+        background-image: url('../images/bg-3d-1.jpeg');
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -283,15 +347,15 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('../images/3d-curve.jpeg');
-        background-size: cover;
+        background-image: url('../images/texture-1.jpeg');
+        background-size: 256px;
         background-position: center center;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-attachment: scroll;
         z-index: -1;
-        opacity: 0.8;
+        opacity: 0.5;
         background-color: rgba(var(--app-color-3-rgb), 0.7);
-        background-blend-mode: multiply;
+        background-blend-mode: lighten;
       }
     }
 
@@ -359,7 +423,7 @@ main {
 
       &::after {
         content: '';
-        background: linear-gradient(0deg,rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.2) 100%);
+        background: linear-gradient(0deg,rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0.1) 100%);
         position: absolute;
         top: 0;
         right: 0;
@@ -445,10 +509,48 @@ main {
 
     &:nth-child(even) {
       background-color: var(--app-color-3);
+      color: transparent;
     }
 
     &:nth-child(odd) {
       background-color: transparent;
+      color: transparent;
     }
   }
+}
+
+
+@keyframes carousel-slide {
+    0% { transform: translateX(0); } /* Começa na posição normal */
+    100% { transform: translateX(-66.666%); } /* Rola para a esquerda até a última imagem */
+    /* Para 3 imagens (A, B, C):
+       0% -> A visível
+       50% -> B visível
+       100% -> C visível (A B C A B C) - o final seria -66.666% para que a imagem A comece de novo
+       O truque é ter cópias das imagens para que a transição seja suave.
+       Mas para simplicidade, vamos rolar até a última imagem e deixar ela começar de novo.
+       Se a rolagem for infinita e suave, você pode duplicar as imagens no HTML
+       (ex: img1, img2, img3, img1, img2) e ajustar o width e translateX.
+       Para 3 imagens sem duplicar, o loop pode ter um pequeno "salto" no final.
+       Mas se as imagens forem abstratas, pode funcionar bem.
+       Vamos tentar com 3 imagens puras e a animação vai rolar até a última.
+       Se quiser um loop perfeito e suave, precisaria de:
+       background-carousel width: 400%; (para 3+1 cópia)
+       img width: 25%;
+       @keyframes carousel-slide { 0% { transform: translateX(0); } 100% { transform: translateX(-75%); } }
+       Para o exemplo atual, 3 imagens:
+       0% -> img1
+       50% -> img2
+       100% -> img3 (a próxima seria img1 novamente)
+       Para um ciclo suave de 3 imagens:
+       100% { transform: translateX(-100%); } /* Rola para a esquerda em 100% da largura de uma imagem,
+                                                  assim a primeira imagem do segundo ciclo começa
+                                                  você precisaria de 2 cópias das imagens no HTML
+                                                  (img1, img2, img3, img1, img2, img3)
+                                                  width: 600%; img width: 16.666%; transform: translateX(-50%);
+
+       Para o seu pedido de "tira de carrossel girando", o mais simples é isso com `translateX`
+       e aceitar um pequeno "corte" no final ou usar mais imagens/duplicar no HTML para suavizar.
+       Vou manter o 300% e -66.666% para que sempre 1 imagem esteja visível e role entre elas.
+    */
 }
