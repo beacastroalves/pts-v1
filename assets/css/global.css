@@ -507,6 +507,10 @@ main {
       }
     }
 
+    &:first-child {
+      height: 80vh;
+    }
+
     &:nth-child(even) {
       background-color: var(--app-color-3);
       color: transparent;
