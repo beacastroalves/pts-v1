@@ -1,28 +1,30 @@
 @media (min-width: 480px) {
-  #solutions {
-    .content-wrapper {
-      .main-heading {
-        font-size: 2em;
-      }
+  main {
+    #solutions {
+      .content-wrapper {
+        .main-heading {
+          font-size: 2em;
+        }
 
-      .sub-heading {
-        font-size: 1.2em;
-      }
+        .sub-heading {
+          font-size: 1.2em;
+        }
 
-      .problem-list-card {
-        .bullet-list {
-          padding: 0 24px 24px 24px;
-          gap: 20px;
+        .problem-list-card {
+          .bullet-list {
+            padding: 0 24px 24px 24px;
+            gap: 20px;
 
-          li {
-            font-size: 1.05em;
-            padding: 20px 24px;
-            padding-left: 60px
+            li {
+              font-size: 1.05em;
+              padding: 20px 24px;
+              padding-left: 60px
 
-          }
+            }
 
-          li::before {
-            left: 20px;
+            li::before {
+              left: 20px;
+            }
           }
         }
       }
@@ -36,8 +38,14 @@
     section {
       &#pts-first {
         .pts-main-content {
+          .cta-button {
+            max-width: 700px;
+          }
+
           .pts-image-container {
-            max-width: 1024px;
+            margin-top: 24px;
+            height: 300px;
+            max-width: 1200px;
           }
         }
       }
@@ -259,6 +267,10 @@
 
             h3 {
               font-size: 1.25em;
+            }
+
+            .cta-button {
+              width: 100%;
             }
           }
 
