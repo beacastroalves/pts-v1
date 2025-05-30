@@ -1,23 +1,4 @@
 @media (min-width: 480px) {
-/* #solutions {
-    .content-wrapper {
-      .main-heading {
-        font-size: 2em;
-      }
-
-      .sub-heading {
-        font-size: 1.2em;
-      }
-
-      .problem-list-card {
-        .bullet-list li {
-          font-size: 1.05em;
-          margin-bottom: 12px;
-        }
-      }
-    }
-  } */
-
   #solutions {
     .content-wrapper {
       .main-heading {
@@ -53,24 +34,6 @@
 @media (min-width: 768px) {
   main {
     section {
-      /* &#solutions {
-        padding: 80px 20px;
-
-        .content-wrapper {
-          padding: 32px;
-
-          .main-heading {
-            font-size: 2.5em;
-            margin-bottom: 24px;
-          }
-
-          .sub-heading {
-            font-size: 1.3em;
-            margin-bottom: 16px;
-          }
-        }
-      } */
-
       &#solutions {
         padding: 80px 20px;
 
@@ -170,12 +133,12 @@
 
             .timeline-item.left {
               align-self: flex-start;
-
               margin: 0;
 
               .timeline-content {
                 margin-right: 40px;
                 text-align: right;
+                padding-top: 4px;
               }
 
               &:last-child {
@@ -189,6 +152,7 @@
 
               .timeline-content {
                 margin-left: 40px;
+                padding-top: 4px;
               }
             }
           }
