@@ -295,6 +295,10 @@
         }
       }
 
+      &#event-info-section {
+        background-attachment: fixed;
+      }
+
       &#testimonials-section {
         padding: 100px 40px;
 
