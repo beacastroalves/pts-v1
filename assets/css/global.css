@@ -45,7 +45,7 @@ main {
     }
 
 
-    &#pts-first {
+    &#pts-one {
       background-color: #f9f9f9;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--app-color-2);
@@ -55,7 +55,7 @@ main {
       justify-content: center;
       align-items: center;
       min-height: 80vh;
-      padding: 40px 0px 0px 0px;
+      padding: 64px 0px;
 
       .pts-main-content {
         max-width: 1200px;
@@ -171,19 +171,11 @@ main {
 
         .pts-image-container {
           width: 100%;
-          max-width: 768px;
-          height: 431px;
-          overflow: hidden;
-          position: relative;
+          max-width: 624px;
+          height: 762px;
+          background-color: #cccccc;
 
-          .pts-rotating-image {
-            background-image: url('../images/header.png');
-            background-size: auto 100%;
-            background-repeat: repeat-x;
-            height: 100%;
-            width: 100%;
-            animation: pts-carousel-slide 40s linear infinite;
-
+          .pts-image {
             img {
               display: none;
             }
@@ -193,10 +185,34 @@ main {
       }
     }
 
+    &#image-divider-section {
+      width: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      position: relative;
+
+      picture {
+        .divider {
+          display: block;
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          box-shadow: none;
+          border: none;
+        }
+      }
+    }
+
     &#solutions {
       text-align: center;
       line-height: 2;
-      background-color: rgba(var(--app-color-2-rgb), 0.8);
+      background-color: rgba(var(--app-color-2-rgb), 0.9);
       color: var(--app-color-3);
       padding: 64px 16px;
       position: relative;
@@ -408,7 +424,7 @@ main {
 
     &#timeline-section {
       background-color: var(--app-color-3);
-      padding: 60px 24px;
+      padding: 64px 24px;
       text-align: center;
 
       h2 {
@@ -462,7 +478,7 @@ main {
               text-align: left;
 
               h3 {
-                font-size: 1.4em;
+                font-size: 1.125em;
                 color: #444444;
                 margin-bottom: 10px;
               }
@@ -482,71 +498,185 @@ main {
     }
 
     &#target-audience-section {
-      background-color: var(--app-color-3); /* Fundo creme/bege */
-      padding: 80px 20px; /* Espaçamento superior/inferior generoso, lateral padrão */
+      background-color: var(--app-color-3);
+      padding: 60px 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--app-color-2); /* Cor do texto padrão (vinho) */
-      text-align: center; /* Alinha o texto ao centro por padrão */
+      color: var(--app-color-2);
+      text-align: center;
 
       .target-audience-content {
-        max-width: 900px; /* Limita a largura do conteúdo para melhor leitura */
-        margin: 0 auto; /* Centraliza o conteúdo */
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
 
-        h1 {
-          font-size: 2em; /* Tamanho para mobile */
-          color: var(--app-color-2);
-          margin-bottom: 25px;
-          line-height: 1.3;
-        }
-
-        h3 {
-          font-size: 1.15em; /* Tamanho para mobile */
-          color: var(--app-color-2);
-          margin-bottom: 15px;
-          opacity: 0.95; /* Levemente mais opaco que o h3 normal */
-          line-height: 1.5;
-        }
-
-        h3:last-of-type {
-          margin-bottom: 30px; /* Espaço antes da lista */
-        }
-
-        ul {
-          list-style: none; /* Remove os marcadores de lista padrão */
-          padding: 0; /* Remove o padding padrão da lista */
-          margin: 0 auto; /* Centraliza a lista */
-          max-width: 600px; /* Limita a largura da lista para melhor aparência */
-
-          li {
-            font-size: 1.1em; /* Tamanho do texto dos itens da lista */
-            line-height: 1.6;
-            margin-bottom: 15px; /* Espaçamento entre os itens */
-            text-align: left; /* Alinha o texto dos itens à esquerda */
-            padding-left: 30px; /* Espaço para o ✔️ customizado */
-            position: relative; /* Para posicionar o ✔️ */
-            color: var(--app-color-2); /* Cor do texto dos itens (vinho) */
+        .target-audience-text {
+          padding: 0 24px;
+          h1 {
+            font-size: 1.5em;
+            color: var(--app-color-2);
+            margin-bottom: 24px;
+            line-height: 1.3;
           }
 
-          li::before {
-            content: '✸'; /* O ícone de check */
-            color: var(--app-color-1); /* Cor dourada/amarela para o check */
-            font-size: 1.2em; /* Tamanho do ícone */
-            position: absolute;
-            left: 0; /* Posiciona o ícone no início do item */
-            top: 50%;
-            transform: translateY(-50%); /* Centraliza verticalmente */
-            filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3)); /* Leve sombra para o check */
+          h3 {
+            font-size: 1.125em;
+            color: var(--app-color-2);
+            margin-bottom: 16px;
+            opacity: 0.95;
+            line-height: 1.5;
+          }
+
+          h3:last-of-type {
+            margin-bottom: 32px;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+
+            li {
+              font-size: 1.1em;
+              line-height: 1.6;
+              margin-bottom: 16px;
+              text-align: left;
+              padding-left: 32px;
+              position: relative;
+              color: var(--app-color-2);
+            }
+
+            li::before {
+              content: '✸';
+              color: var(--app-color-1);
+              font-size: 1.2em;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3));
+            }
+          }
+        }
+
+        .target-audience-img {
+          height: 100%;
+          width: auto;
+          max-width: 500px;
+          background-color: var(--app-color-1);
+
+          img {
+              object-fit: contain;
+            }
+        }
+      }
+    }
+
+    &#benefits-section {
+      background-color: var(--app-color-1);
+      padding: 72px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--app-color-2);
+      text-align: center;
+
+      .benefits-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+
+        .benefits-text-container {
+          padding: 0 15px;
+          text-align: center;
+
+          h1 {
+            font-size: 2em;
+            color: var(--app-color-2);
+            margin-bottom: 30px;
+            line-height: 1.3;
+          }
+
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 600px;
+
+            li {
+              font-size: 1.1em;
+              line-height: 1.6;
+              margin-bottom: 16px;
+              text-align: left;
+              padding-left: 48px;
+              position: relative;
+              color: var(--app-color-2);
+
+              &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+                background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f1e9df"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                box-shadow: 1px 1px 10px rgba(var(--app-color-2-rgb), 0.3);
+              }
+            }
+          }
+        }
+
+        .speakers-photos-container {
+          display: flex;
+          flex-direction: column; /* Empilha as fotos em mobile */
+          gap: 30px; /* Espaço entre as fotos */
+          align-items: center; /* Centraliza as fotos */
+          width: 100%;
+          max-width: 500px; /* Limita a largura do container em mobile */
+
+          .speaker-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 200px; /* Largura máxima para cada card de palestrante em mobile */
+
+            img {
+              width: 150px; /* Tamanho da foto do palestrante */
+              height: 150px;
+              border-radius: 50%; /* Torna a foto redonda */
+              object-fit: cover; /* Garante que a foto preencha o círculo */
+              border: 3px solid var(--app-color-2); /* Borda dourada/amarela na foto */
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+              margin-bottom: 10px;
+            }
+
+            h3 {
+              font-size: 1.1em;
+              font-weight: bold;
+              color: var(--app-color-2);
+              margin: 0; /* Remove margem padrão */
+            }
           }
         }
       }
     }
   }
 
-  .separator {
-    background-image: url(../images/separator.png);
-    background-size: 70px 36px;
+  div.separator {
+    background-image: url(../images/separator-d.png);
+    background-size: 250px 70px;
     background-repeat: repeat;
-    height: 25px;
+    height: 64px;
     width: 100%;
     background-color: var(--app-color-3);
 
@@ -556,6 +686,7 @@ main {
 
     &.second {
       transform: rotateY(180deg);
+      height: 30px;
     }
   }
 }
