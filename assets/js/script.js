@@ -37,6 +37,56 @@ document.addEventListener('DOMContentLoaded', function() {
     fazerLinhaAndar();
   }
 
+  const sliderTrack = document.querySelector('.slider-track');
+  const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+  const prevButton = document.querySelector('.prev-slide');
+  const nextButton = document.querySelector('.next-slide');
+  const sliderDotsContainer = document.querySelector('.slider-dots');
+
+  let currentIndex = 0;
+  const totalSlides = testimonialSlides.length;
+
+  function updateSlider() {
+    const offset = -currentIndex * 100;
+    sliderTrack.style.transform = `translateX(${offset}%)`;
+
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+      if (index === currentIndex) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+
+  function createDots() {
+    sliderDotsContainer.innerHTML = '';
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      dot.dataset.index = i;
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        updateSlider();
+      });
+      sliderDotsContainer.appendChild(dot);
+    }
+
+    updateSlider();
+  }
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
+  });
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  });
+
+  createDots();
+
   window.addEventListener('scroll', onScrollGlobal);
   onScrollGlobal();
 });
