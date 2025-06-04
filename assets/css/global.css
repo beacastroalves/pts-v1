@@ -198,9 +198,12 @@ main {
 
     &#image-divider-section {
       width: 100%;
+      height: auto;
       overflow: hidden;
       margin: 0;
+      margin-bottom: -1px;
       padding: 0;
+      padding-top: 16px;
       line-height: 0;
       display: flex;
       justify-content: center;
@@ -211,7 +214,7 @@ main {
       picture {
         .divider {
           display: block;
-          width: 100%;
+          width: 100vw;
           height: auto;
           object-fit: cover;
           box-shadow: none;
@@ -486,7 +489,7 @@ main {
             padding-left: 50px;
 
             .timeline-content {
-              background-color: #fff;
+              background-color: #f9f9f9;
               border-radius: 8px;
               box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
               padding: 24px;
@@ -631,6 +634,7 @@ main {
               padding-left: 48px;
               position: relative;
               color: var(--app-color-2);
+              width: fit-content;
 
               &::before {
                 content: '';
@@ -645,6 +649,15 @@ main {
                 background-repeat: no-repeat;
                 background-position: center;
                 box-shadow: 1px 1px 10px rgba(var(--app-color-2-rgb), 0.3);
+                border-radius: 8px;
+                padding: 2px;
+              }
+
+              &:hover {
+                cursor: context-menu;
+                transform: scale(1.05);
+                background-color: rgba(var(--app-color-3-rgb), 0.15);
+                border-radius: 8px;
               }
             }
           }
