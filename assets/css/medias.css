@@ -1,6 +1,23 @@
 @media (min-width: 480px) {
   main {
     section {
+      &#pts-one {
+        padding: 60px 24px 80px;
+        .pts-main-content {
+          .pts-text-container {
+            h1 {
+              font-size: 1.5em;
+              margin-bottom: 16px;
+            }
+
+            h3 {
+              font-size: 1.25em;
+              margin-bottom: 16px;
+            }
+          }
+        }
+      }
+
       &#pts-divisor {
         .pts-main-content {
           .pts-text-container {
@@ -62,10 +79,17 @@
   main {
     section {
       &#pts-one {
+        padding: 60px 40px 80px;
         .pts-main-content {
           .pts-text-container {
             h1 {
               font-size: 1.75em;
+              margin-bottom: 16px;
+            }
+
+            h3 {
+              font-size: 1.5em;
+              margin-bottom: 16px;
             }
 
             .cta-button {
@@ -285,51 +309,55 @@
         }
 
         .testimonial-slider {
-          flex-direction: row;
-          gap: 20px;
-          align-items: center;
+          flex-direction: column;
+          padding-bottom: 0;
 
           .slider-track {
-            order: 2;
+            order: 1;
             flex-grow: 1;
           }
 
-          .slider-controls {
-            width: auto;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 0;
-
+          .navbar-slider {
             position: absolute;
+            width: 90%;
             top: 50%;
+            left: 5%;
             transform: translateY(-50%);
-
-            left: -60px;
-            right: -60px;
             z-index: 10;
+            justify-content: space-around;
+            gap: 0;
+            padding: 0;
 
-            &:first-of-type {
-              left: -60px;
-              right: auto;
+            .slider-controls {
+              position: absolute;
+              width: auto;
+
+              &.left {
+                left: -60px;
+                right: auto;
+                order: unset;
+              }
+
+              &.right {
+                right: -60px;
+                left: auto;
+                order: unset;
+              }
+
+              button {
+                margin: 0;
+              }
             }
 
-            &:last-of-type {
-              left: auto;
-              right: -60px;
+            .slider-dots {
+              position: absolute;
+              bottom: -200px;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: auto;
+              margin-top: 0;
+              order: unset;
             }
-
-            button {
-              /* position: static; */
-              margin: 0;
-            }
-          }
-
-          .slider-dots {
-            position: absolute;
-            bottom: -40px;
-            order: 4;
-            width: 100%;
-            margin-top: 0;
           }
 
           .testimonial-card {
@@ -511,24 +539,12 @@
         }
 
         .testimonial-slider {
-          .slider-controls {
-            left: -80px;
-            right: -80px;
-
-            &:first-of-type {
-              left: -80px;
-            }
-            &:last-of-type {
-              right: -80px;
-            }
-          }
-
           .testimonial-card {
             padding: 50px;
             min-height: 300px;
 
             .reviewer-info {
-              top: -50px;
+              top: -30px;
               left: 50px;
               padding: 20px 25px;
             }
@@ -562,13 +578,11 @@
   main {
     section {
       &#pts-one {
-        padding: 80px 40px;
-
         .pts-main-content {
           flex-direction: row;
           align-items: center;
           text-align: left;
-          gap: 116px;
+          gap: 96px;
 
           .pts-text-container {
             display: flex;

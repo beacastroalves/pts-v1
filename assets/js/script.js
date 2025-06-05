@@ -46,6 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentIndex = 0;
   const totalSlides = testimonialSlides.length;
 
+  // Variáveis para Rolagem Automática
+  const autoSlideInterval = 10000; // 10 segundos
+  const pauseAfterInteraction = 30000; // 30 segundos de pausa após interação
+  let slideTimer;
+  let interactionTimer;
+
   function updateSlider() {
     const offset = -currentIndex * 100;
     sliderTrack.style.transform = `translateX(${offset}%)`;
@@ -59,6 +65,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // --- Funções para Rolagem Automática ---
+  function startAutoSlide() {
+    stopAutoSlide(); // Para qualquer timer existente para evitar duplicação
+    slideTimer = setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    }, autoSlideInterval);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(slideTimer);
+    clearTimeout(interactionTimer);
+  }
+
+  function resetAutoSlideTimer() {
+    stopAutoSlide(); // Para a rolagem automática e a pausa atual
+    interactionTimer = setTimeout(() => {
+      startAutoSlide();
+    }, pauseAfterInteraction);
+  }
+  // --- Fim das Funções de Rolagem Automática ---
+
+
   function createDots() {
     sliderDotsContainer.innerHTML = '';
     for (let i = 0; i < totalSlides; i++) {
@@ -68,24 +97,29 @@ document.addEventListener('DOMContentLoaded', function() {
       dot.addEventListener('click', () => {
         currentIndex = i;
         updateSlider();
+        resetAutoSlideTimer(); // Reinicia o timer ao clicar nos dots
       });
       sliderDotsContainer.appendChild(dot);
     }
-
-    updateSlider();
+    updateSlider(); // Garante que o dot inicial esteja ativo
   }
 
+  // Event Listeners para os botões de navegação
   nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % totalSlides;
     updateSlider();
+    resetAutoSlideTimer(); // Reinicia o timer ao clicar nos botões
   });
 
   prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     updateSlider();
+    resetAutoSlideTimer(); // Reinicia o timer ao clicar nos botões
   });
 
-  createDots();
+  // --- Inicialização ---
+  createDots(); // Cria os dots e define o slide inicial
+  startAutoSlide(); // Inicia a rolagem automática quando o script é carregado
 
   window.addEventListener('scroll', onScrollGlobal);
   onScrollGlobal();
