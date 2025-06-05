@@ -103,23 +103,9 @@
         }
       }
 
-      &#pts-divisor {
-        .pts-main-content {
-          .pts-text-container {
-            h1 {
-              font-size: 1.75em;
-            }
-
-            .cta-button {
-              max-width: 600px;
-            }
-          }
-
-          .pts-image-container {
-            margin-top: 24px;
-            height: 300px;
-            max-width: 1200px;
-          }
+      &#image-divider-section {
+        .animated-divider {
+          animation: pts-carousel-slide 50s linear infinite;
         }
       }
 
@@ -475,10 +461,6 @@
             }
           }
         }
-
-        &::after {
-         
-        }
       }
 
       &#target-audience-section {
@@ -605,50 +587,11 @@
 
           .pts-image-container {
             flex: 1;
-           
             border-radius: 20px;
           }
         }
       }
 
-      &#pts-divisor {
-        padding: 80px 40px;
-
-        .pts-main-content {
-          flex-direction: row;
-          align-items: center;
-          text-align: left;
-          gap: 60px;
-
-          .pts-text-container {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            padding: 0;
-
-            h1 {
-              font-size: 2.75em;
-            }
-
-            h3 {
-              font-size: 1.25em;
-            }
-
-            .cta-button {
-              max-width: 100%;
-            }
-          }
-
-          .pts-image-container {
-            max-width: 500px;
-            border-radius: 20px;
-
-            .pts-rotating-image {
-              animation: pts-carousel-slide 50s linear infinite;
-            }
-          }
-        }
-      }
     }
   }
 }

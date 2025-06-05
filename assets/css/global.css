@@ -231,28 +231,30 @@ main {
     }
 
     &#image-divider-section {
-      width: 100%;
-      height: auto;
-      overflow: hidden;
-      margin: 0;
-      margin-bottom: -1px;
+      background-color: #f9f9f9;
       padding: 0;
-      line-height: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: transparent;
-      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: -1px;
 
       picture {
-        .divider {
-          display: block;
-          width: 105vw;
-          height: auto;
-          object-fit: cover;
-          box-shadow: none;
-          border: none;
-        }
+        display: block;
+        width: 100%;
+      }
+
+      .animated-divider {
+        background-image: url('../images/divider-desktop.png');
+        background-size: auto 100%;
+        background-repeat: repeat-x;
+        height: 200px;
+        width: 100%;
+        animation: pts-carousel-slide 40s linear infinite;
+        display: block;
+      }
+
+
+      img.divider {
+        display: none;
       }
     }
 
