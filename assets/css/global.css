@@ -218,7 +218,7 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('../images/teexture-sand.jpg');
+        background-image: url('../images/texture-sand.jpg');
         background-size:  1024px;
         background-position: center center;
         background-repeat: repeat;
@@ -247,7 +247,7 @@ main {
       picture {
         .divider {
           display: block;
-          width: 100vw;
+          width: 105vw;
           height: auto;
           object-fit: cover;
           box-shadow: none;
