@@ -274,24 +274,6 @@
               font-size: 2.2em;
             }
           }
-
-          .speakers-photos-container {
-            flex: 1;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            max-width: none;
-
-            .speaker-card {
-              max-width: 180px;
-
-              img {
-                width: 120px;
-                height: 120px;
-              }
-            }
-          }
         }
       }
 
@@ -377,6 +359,32 @@
               font-size: 1.1em;
               margin-top: 60px;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 900px) {
+  main {
+    section {
+      &#pts-one {
+        .pts-main-content {
+          flex-direction: row;
+          align-items: center;
+          text-align: left;
+          gap: 40px;
+
+          .pts-text-container {
+            flex: 1;
+          }
+
+          .pts-image-container {
+            padding: 0;
+            flex: 1;
+            margin-right: 16px;
           }
         }
       }
@@ -494,15 +502,6 @@
               font-size: 1.25em;
             }
           }
-
-          .speakers-photos-container {
-            gap: 30px;
-
-            .speaker-card img {
-              width: 150px;
-              height: 150px;
-            }
-          }
         }
       }
 
@@ -569,7 +568,7 @@
           flex-direction: row;
           align-items: center;
           text-align: left;
-          gap: 60px;
+          gap: 116px;
 
           .pts-text-container {
             display: flex;

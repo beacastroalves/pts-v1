@@ -137,7 +137,7 @@ main {
       justify-content: center;
       align-items: center;
       min-height: 80vh;
-      padding: 64px 0px;
+      padding: 32px 0px;
 
       .pts-main-content {
         max-width: 1200px;
@@ -146,6 +146,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 40px;
         padding: 0;
 
@@ -185,14 +186,28 @@ main {
 
         .pts-image-container {
           width: 100%;
-          max-width: 624px;
-          height: 762px;
-          background-color: #cccccc;
+          max-width: 600px;
+          height: fit-content;
+          position: relative;
+          padding-bottom: 24px;
+          padding-top: 40px;
+          padding-right: 16px;
 
-          .pts-image {
-            img {
-              display: none;
-            }
+
+          .pts-bg {
+            width: 100%;
+            height: 60%;
+            bottom: 0;
+            background-color: rgba(var(--app-color-3-rgb), 0.9);
+            position: absolute;
+            z-index: 0;
+            border-radius: 60% 30%;
+          }
+
+          img {
+            width: 100%;
+            z-index: 1;
+            position: relative;
           }
         }
       }
@@ -333,7 +348,6 @@ main {
                 background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23893B37"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>');
                 background-size: contain;
                 background-repeat: no-repeat;
-               
               }
 
               &.hidden-item {
@@ -611,6 +625,7 @@ main {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: var(--app-color-2);
       text-align: center;
+      position: relative;
 
       .benefits-content {
         max-width: 1200px;
@@ -673,39 +688,20 @@ main {
             }
           }
         }
+      }
 
-        .speakers-photos-container {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          align-items: center;
-          width: 100%;
-          max-width: 500px;
+      .wave {
+        position: absolute;
+        left: 0;
+        z-index: 3;
+        background-color: transparent;
 
-          .speaker-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 200px;
+        &.top {
+          top: -34px;
+        }
 
-            img {
-              width: 150px;
-              height: 150px;
-              border-radius: 50%;
-              object-fit: cover;
-              border: 3px solid var(--app-color-2);
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-              margin-bottom: 10px;
-            }
-
-            h3 {
-              font-size: 1.1em;
-              font-weight: bold;
-              color: var(--app-color-2);
-              margin: 0;
-            }
-          }
+        &.bottom {
+          bottom: -34px;
         }
       }
     }
@@ -1014,11 +1010,6 @@ main {
       background-color: var(--app-color-3);
     }
 
-    &.second {
-      transform: rotateY(180deg);
-      height: 30px;
-    }
-
     &.arrow {
       background-image: url(../images/setasecao.svg);
       background-size: 250px;
@@ -1031,6 +1022,8 @@ main {
       left: 0;
       padding-top: 16px;
     }
+
+
   }
 }
 
