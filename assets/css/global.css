@@ -885,7 +885,6 @@ main {
           min-height: 250px;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
 
           .testimonial-header {
             display: flex;
