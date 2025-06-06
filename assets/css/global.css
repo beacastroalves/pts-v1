@@ -176,8 +176,8 @@ main {
           opacity: 0.9;
           line-height: 1.5;
           margin-bottom: 16px;
-          /* background-color: var(--app-color-3); */
-          /* padding: 16px; */
+         
+         
 
           &:first-of-type {
             margin-top: 16px;
@@ -225,7 +225,7 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('../images/texture-sand.jpg');
+        background-image: url('../images/texture-sand.jpeg');
         background-size:  1024px;
         background-position: center center;
         background-repeat: repeat;
@@ -250,7 +250,7 @@ main {
       }
 
       .animated-divider {
-        background-image: url('../images/divider-desktop.png');
+        background-image: url('../images/divider-desktop.jpeg');
         background-size: auto 100%;
         background-repeat: repeat-x;
         height: 200px;
@@ -410,7 +410,7 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('../images/texture-carpet.jpg');
+        background-image: url('../images/texture-carpet.jpe g');
         background-size:  1024px;
         background-position: center center;
         background-repeat: repeat;
@@ -441,7 +441,7 @@ main {
         align-items: center;
 
         .pts-text-container {
-          /* padding: 0 16px; */
+         
           line-height: 1.6;
           width: 100%;
 
@@ -677,7 +677,7 @@ main {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 32px;
         align-items: center;
 
         .benefits-text-container {
@@ -733,6 +733,41 @@ main {
             }
           }
         }
+
+        .speakers-photos-container {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          align-items: center;
+          width: 100%;
+          max-width: 500px;
+
+          .speaker-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 200px;
+
+            img {
+              width: 250px;
+              height: 250px;
+              border-radius: 50%;
+              border-radius: 16px;
+              object-fit: cover;
+              border: 3px solid var(--app-color-1);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+              margin-bottom: 10px;
+            }
+
+            h3 {
+              font-size: 1.1em;
+              font-weight: bold;
+              color: var(--app-color-2);
+              margin: 0;
+            }
+          }
+        }
       }
 
       .wave {
@@ -784,18 +819,33 @@ main {
           list-style: none;
           padding: 0;
           margin: 0;
-          margin-bottom: 32px;
+          margin-bottom: 16px;
 
           li {
-            font-size: 1.3em;
+            font-size: 18px;
             line-height: 1.6;
-            margin-bottom: 8px;
+            margin-bottom: 20px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 16px;
 
-            .info-icon {
-              font-size: 1.5em;
+            .title {
+              display: flex;
+              align-items: center;
+              gap: 16px;
+
+              ion-icon {
+                margin: 0;
+                font-size: 1.5em;
+              }
+            }
+
+            .value {
+              ul {
+                li {
+                  margin-bottom: 4px;
+                }
+              }
             }
 
             .event-info-content .cta-button {
@@ -807,16 +857,23 @@ main {
         .cta-button {
           width: 100%;
           max-width: 500px;
+          height: fit-content;
+          padding: 16px 60px;
+
+          span {
+            text-wrap: wrap;
+            max-width: 70%;
+          }
         }
 
         &.glass {
-          padding: 32px 16px;
           background: rgba(0, 0, 0, 0.35);
           border-radius: 16px;
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           backdrop-filter: blur(6px);
           -webkit-backdrop-filter: blur(6px);
           border: 1px solid rgba(0, 0, 0, 0.1);
+          padding: 60px 16px;
         }
       }
 
@@ -886,71 +943,53 @@ main {
         .testimonial-card {
           background-color: #ffffff;
           border-radius: 16px;
-          padding: 32px;
+          padding: 16px;
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
           text-align: left;
           max-width: 600px;
           width: 100%;
           position: relative;
-          min-height: 250px;
+          min-height: 150px;
           display: flex;
           flex-direction: column;
+          justify-content: center;
 
           .testimonial-header {
             display: flex;
             align-items: flex-start;
             margin-bottom: 20px;
+
+            .reviewer-info {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              position: absolute;
+              top: -20px;
+              left: -8px;
+              background-color: #ffffff;
+              padding: 12px 24px;
+              border-radius: 50px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              z-index: 2;
+
+              .reviewer-details {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .rating-stars {
+                  font-size: 0.9em;
+                  color: var(--app-color-1);
+                  white-space: nowrap;
+                }
+              }
+            }
           }
 
-          .reviewer-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            position: absolute;
-            top: -30px;
-            left: -8px;
-            background-color: #ffffff;
-            padding: 12px 24px;
-            border-radius: 50px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            z-index: 2;
+          img {
+            border-radius: 16px;
           }
 
-          .reviewer-photo {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--app-color-1);
-          }
-
-          .reviewer-details {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-          }
-
-          .reviewer-name {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: var(--app-color-2);
-            margin-bottom: 5px;
-            white-space: nowrap;
-          }
-
-          .rating-stars {
-            font-size: 0.9em;
-            color: var(--app-color-1);
-            white-space: nowrap;
-          }
-
-          .testimonial-text {
-            font-size: 1em;
-            color: var(--app-color-2);
-            line-height: 1.6;
-            margin-top: 32px;
-            padding-left: 10px;
-          }
 
           .testimonial-video {
             margin-top: 20px;

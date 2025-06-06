@@ -107,7 +107,7 @@
 
       &#image-divider-section {
         .animated-divider {
-          animation: pts-carousel-slide 50s linear infinite;
+          animation: pts-carousel-slide 40s linear infinite;
         }
       }
 
@@ -269,7 +269,7 @@
         .benefits-content {
           flex-direction: row;
           text-align: left;
-          gap: 80px;
+          gap: 8px;
 
           .benefits-text-container {
             flex: 2;
@@ -278,6 +278,24 @@
             h1 {
               font-size: 2em;
             }
+          }
+
+          .speakers-photos-container {
+            flex: 1;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            max-width: none;
+
+            .speaker-card {
+            max-width: 180px;
+
+            img {
+              width: 150px;
+              height: 150px;
+            }
+          }
           }
         }
       }
@@ -342,7 +360,6 @@
           }
 
           .testimonial-card {
-            padding: 40px;
             min-height: 280px;
 
             .reviewer-info {
@@ -520,7 +537,6 @@
 
         .testimonial-slider {
           .testimonial-card {
-            padding: 50px;
             min-height: 300px;
 
             .reviewer-info {
