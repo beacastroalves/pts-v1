@@ -351,13 +351,14 @@ main {
               text-align: left;
 
               span.highlight {
+                background-color: rgba(var(--app-color-1-rgb), 0.5);
                 font-weight: bold;
-                color: var(--app-color-2);
-                background-color: var(--app-color-1);
                 padding: 2px 4px;
+                color: var(--app-color-2);
 
                 &.light {
-                  background-color: rgba(var(--app-color-1-rgb), 0.5);
+                  background-color: var(--app-color-1);
+                  padding: 4px 8px;
                 }
               }
 
@@ -377,6 +378,15 @@ main {
               &.hidden-item {
                 opacity: 0;
                 transform: translateY(20px);
+              }
+
+              &:last-child {
+                padding: 16px;
+                text-align: center;
+
+                &::before {
+                  content: unset;
+                }
               }
             }
 
