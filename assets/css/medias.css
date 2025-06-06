@@ -55,7 +55,7 @@
               }
 
               li::before {
-                left: 20px;
+                left: 24px;
               }
             }
           }
@@ -65,8 +65,10 @@
       &#target-audience-section {
         .target-audience-content {
           .target-audience-img {
-            border-radius: 16px;
-            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+            img {
+              border-radius: 16px;
+              box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+            }
           }
         }
       }
@@ -160,7 +162,7 @@
             .bullet-list li::before {
               width: 28px;
               height: 28px;
-              left: 20px;
+              left: 16px;
               top: 50%;
               transform: translateY(-50%);
             }
@@ -257,13 +259,6 @@
               font-size: 1.125em;
               padding-left: 40px;
             }
-          }
-
-          .target-audience-img {
-            max-height: 300px;
-            width: auto;
-            max-width: 300px;
-
           }
         }
       }
@@ -450,7 +445,9 @@
             }
 
             h3 {
-              font-size: 1.3em;
+              font-size: 1.375em;
+              padding: 16px 24px;
+              text-align: center;
             }
           }
 
@@ -468,6 +465,7 @@
           display: flex;
           flex-direction: row;
           text-align: left;
+          align-items: center;
           gap: 64px;
 
           h1 {
@@ -573,11 +571,11 @@
             padding: 0;
 
             h1 {
-              font-size: 2.75em;
+              font-size: 2.25em;
             }
 
             h3 {
-              font-size: 1.25em;
+              font-size: 1.375em;
             }
 
             .cta-button {
@@ -588,6 +586,22 @@
           .pts-image-container {
             flex: 1;
             border-radius: 20px;
+          }
+        }
+      }
+
+      &#pts {
+        .pts-content-wrapper {
+          .pts-text-container {
+            h1 {
+              font-size: 2.25em;
+            }
+
+            h3 {
+              font-size: 1.375em;
+              padding: 16px 24px;
+              text-align: center;
+            }
           }
         }
       }

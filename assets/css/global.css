@@ -158,14 +158,15 @@ main {
         .pts-text-container h1 {
           font-size: 1.25em;
           color: var(--app-color-2);
-          margin-bottom: 10px;
+          margin-bottom: 4px;
           line-height: 1.3;
 
           span {
             color: var(--app-color-1);
             background-color: rgba(var(--app-color-2-rgb), 0.9);
-            padding: 2px 10px;
+            padding: 4px 10px;
             border-radius: 10px 2px;
+            font-size: 1.275em;
           }
         }
 
@@ -174,9 +175,15 @@ main {
           color: var(--app-color-2);
           opacity: 0.9;
           line-height: 1.5;
-          margin-bottom: 8px;
+          margin-bottom: 16px;
           /* background-color: var(--app-color-3); */
           /* padding: 16px; */
+
+          &:first-of-type {
+            margin-top: 16px;
+            padding: 4px 0;
+            background-color: rgba(var(--app-color-3-rgb), 0.3);
+          }
 
           &:last-of-type {
             margin-bottom: 32px;
@@ -307,7 +314,6 @@ main {
           margin-top: 30px;
           text-align: left;
           position: relative;
-         
 
           .card-heading {
             font-size: 1.4em;
@@ -425,20 +431,23 @@ main {
         align-items: center;
 
         .pts-text-container {
-          padding: 0 16px;
+          /* padding: 0 16px; */
           line-height: 1.6;
           width: 100%;
 
           h1 {
-            font-size: 1.5em;
+            font-size: 1.25em;
             color: var(--app-color-2);
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             line-height: 1.3;
 
             span {
               color: var(--app-color-1);
               font-weight: bold;
               text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+              background-color: rgba(var(--app-color-2-rgb), 0.9);
+              padding: 8px 16px;
+              border-radius: 16px 4px;
             }
           }
 
@@ -447,6 +456,15 @@ main {
             color: var(--app-color-2);
             opacity: 0.9;
             line-height: 1.5;
+            background-color: rgba(var(--app-color-1-rgb), 0.85);
+            padding: 8px 16px;
+            border: 30px solid rgba(var(--app-color-1-rgb), 0.18);
+            border-radius: 60% 30%;
+
+            span {
+              font-size: 1.25;
+
+            }
           }
         }
 
@@ -564,13 +582,13 @@ main {
       text-align: center;
 
       .target-audience-content {
-        max-width: 900px;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 24px;
+        max-width: 900px;
+        margin: 0 auto;
 
         .target-audience-text {
           padding: 0 24px;
@@ -623,11 +641,10 @@ main {
         }
 
         .target-audience-img {
-          height: 100%;
-          width: auto;
-          max-width: 500px;
+          height: auto;
+          width: 100%;
+          max-width: 300px;
           background-color: transparent;
-          padding: 2px;
 
           img {
             width: 100%;
