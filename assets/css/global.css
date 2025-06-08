@@ -1591,6 +1591,23 @@ main {
   }
 }
 
+footer {
+  width: 100%;
+  height: fit-content;
+  margin-top: 32px;
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--app-color-2);
+  font-weight: 500;
+  font-size: 0.8125em;
+
+  a {
+    text-decoration: none;
+    color: var(--app-color-2);
+    font-weight: bold;
+  }
+}
+
 
 @keyframes pts-carousel-slide {
   0% {
