@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Criando o linha do tempo
+  // --- Linha do Tempo e Animação de Itens ---
   const listaDeProblemasItens = document.querySelectorAll('.bullet-list li.hidden-item');
   const linhaColorida = document.querySelector('.timeline-line-fill');
   const secaoDaLinhaDoTempo = document.querySelector('.timeline-wrapper');
 
-  // --- Funções para deixar linha do tempo visivel ---
+  // Função para verificar visibilidade dos itens e aplicar classes
   function verificarVisibilidadeItens() {
     listaDeProblemasItens.forEach(item => {
       const itemRect = item.getBoundingClientRect();
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Função para animar a linha de preenchimento
   function fazerLinhaAndar() {
     const infoDaSecao = secaoDaLinhaDoTempo.getBoundingClientRect();
     const pontoDeReferencia = window.innerHeight / 2;
@@ -34,12 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
+  // Otimização com requestAnimationFrame para scroll
   function onScrollGlobal() {
     verificarVisibilidadeItens();
     fazerLinhaAndar();
   }
 
-  // --- Inicialização ---
+  // --- Inicialização da Linha do Tempo ---
   window.addEventListener('scroll', onScrollGlobal);
   onScrollGlobal();
 
