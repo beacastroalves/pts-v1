@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Criando o linha do tempo
   const listaDeProblemasItens = document.querySelectorAll('.bullet-list li.hidden-item');
   const linhaColorida = document.querySelector('.timeline-line-fill');
   const secaoDaLinhaDoTempo = document.querySelector('.timeline-wrapper');
 
+  // --- Funções para deixar linha do tempo visivel ---
   function verificarVisibilidadeItens() {
     listaDeProblemasItens.forEach(item => {
       const itemRect = item.getBoundingClientRect();
@@ -37,6 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     fazerLinhaAndar();
   }
 
+  // --- Inicialização ---
+  window.addEventListener('scroll', onScrollGlobal);
+  onScrollGlobal();
+
+  // Criando o slide de depoimentos
   const sliderTrack = document.querySelector('.slider-track');
   const testimonialSlides = document.querySelectorAll('.testimonial-slide');
   const prevButton = document.querySelector('.prev-slide');
@@ -67,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Funções para Rolagem Automática ---
   function startAutoSlide() {
-    stopAutoSlide(); // Para qualquer timer existente para evitar duplicação
+    stopAutoSlide();
     slideTimer = setInterval(() => {
       currentIndex = (currentIndex + 1) % totalSlides;
       updateSlider();
@@ -80,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function resetAutoSlideTimer() {
-    stopAutoSlide(); // Para a rolagem automática e a pausa atual
+    stopAutoSlide();
     interactionTimer = setTimeout(() => {
       startAutoSlide();
     }, pauseAfterInteraction);
@@ -121,12 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
   createDots(); // Cria os dots e define o slide inicial
   startAutoSlide(); // Inicia a rolagem automática quando o script é carregado
 
-  // const splide = new Splide('.splide', {
-  //   type: 'loop',
-  //   autoplay: true,
-  // });
-  // setTimeout(() => splide.mount());
-
 
   const main = new Splide('#main-slider', {
     type: 'fade',
@@ -153,6 +154,21 @@ document.addEventListener('DOMContentLoaded', function() {
   main.mount();
   thumbnails.mount();
 
-  window.addEventListener('scroll', onScrollGlobal);
-  onScrollGlobal();
+
+  document.querySelectorAll('.accordion .trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const accordion = trigger.parentElement;
+      const isOpen = accordion.classList.contains('open');
+
+      if (isOpen) {
+        accordion.classList.remove('open');
+      } else {
+        document.querySelectorAll('.accordion').forEach(accordion => {
+          accordion.classList.remove('open');
+        });
+
+        accordion.classList.add('open');
+      }
+    });
+  });
 });
