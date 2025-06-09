@@ -197,7 +197,8 @@ main {
 
           ul {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             width: 100%;
             gap: 8px;
             height: fit-content;
