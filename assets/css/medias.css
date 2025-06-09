@@ -1,3 +1,11 @@
+@charset "UTF-8";
+
+@import url(./variable.css);
+@import url(./global.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 @media (min-width: 480px) {
   main {
     section {
@@ -8,16 +16,10 @@
           .pts-one-text-container {
             h1 {
               font-size: 1.5em;
-              margin-bottom: 16px;
             }
 
             h3 {
               font-size: 1.25em;
-              margin-bottom: 16px;
-
-              &:last-child {
-                font-size: 1.125;
-              }
             }
           }
         }
@@ -95,16 +97,18 @@
           .pts-one-text-container {
             h1 {
               font-size: 1.75em;
-              margin-bottom: 16px;
+            }
+
+            h2 {
+              font-size: 1.375em;
             }
 
             h3 {
               font-size: 1.375em;
-              margin-bottom: 16px;
+            }
 
-              &:last-of-type {
-                font-size: 1.25em;
-              }
+            ul {
+              font-size: 1em;
             }
 
             .cta-button {
@@ -467,7 +471,13 @@
           gap: 40px;
 
           .pts-one-text-container {
+            gap: 16px;
             flex: 1;
+
+            ul {
+              justify-content: flex-start;
+              font-size: 1.125em;
+            }
           }
 
           .pts-image-container {
@@ -524,8 +534,10 @@
           }
 
           .pts-text-container {
+            align-items: flex-start;
             h1 {
               font-size: 2.25em;
+              text-align: left;
             }
 
             h3 {
@@ -726,9 +738,6 @@
           gap: 96px;
 
           .pts-one-text-container {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
             padding: 0;
 
             h1 {
