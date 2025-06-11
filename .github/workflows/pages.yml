@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         run: |
-          npm run build
+          npm run build -- --base=/${{ github.event.repository.name }}/
 
       - name: Upload production-ready assets
         uses: actions/upload-pages-artifact@v3
