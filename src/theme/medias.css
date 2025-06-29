@@ -560,6 +560,12 @@
         }
       }
 
+      &#timeline-section {
+        .timeline-subtitle {
+          max-width: 600px;
+        }
+      }
+
       &#target-audience-section {
         .target-audience-content {
           display: flex;
