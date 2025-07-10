@@ -7,8 +7,6 @@
   main {
     section {
       &#pts-one {
-        padding: 40px 24px 80px;
-
         .pts-main-content {
           .pts-one-text-container {
             h1 {
@@ -89,7 +87,7 @@
   main {
     section {
       &#pts-one {
-        padding: 48px 40px 80px;
+        padding: 48px 40px 0;
         .pts-main-content {
           .pts-one-text-container {
             h1 {
@@ -463,6 +461,7 @@
   main {
     section {
       &#pts-one {
+        padding: 48px 40px 80px;
         .pts-main-content {
           flex-direction: row;
           align-items: center;
@@ -487,6 +486,11 @@
             padding: 0;
             flex: 1;
             margin-right: 16px;
+
+            img {
+              border-radius: 16px;
+              box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+            }
           }
         }
       }
