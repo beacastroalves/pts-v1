@@ -10,6 +10,7 @@
 
 body {
   font-family: 'Raleway';
+  user-select: none;
 }
 
 h1 {
@@ -343,7 +344,7 @@ main {
             border-radius: 8px;
             padding: 12px;
 
-            .highlight {
+            span.highlight {
               color: var(--app-color-1);
               font-weight: bold;
             }
@@ -463,6 +464,7 @@ main {
         background-repeat: repeat;
         background-attachment: scroll;
         opacity: 0.15;
+        filter: brightness(0.7);
       }
     }
 
@@ -1549,6 +1551,17 @@ main {
                 color: var(--app-color-2);
                 padding: 12px 32px;
                 margin: 8px 0;
+
+                a {
+                  color: var(--app-color-2);
+                  color: var(--app-color-btn);
+                  text-decoration: none;
+                  padding: 0 4px;
+
+                  &:hover {
+                    border-bottom: 2px solid var(--app-color-btn);
+                  }
+                }
               }
             }
 
@@ -1575,8 +1588,11 @@ main {
 
                 span {
                   font-weight: bold;
-                  background-color: rgba(var(--app-color-1-rgb), 0.2);
-                  padding: 0 4px;
+
+                  &.highlight {
+                    padding: 0 4px;
+                    background-color: rgba(var(--app-color-1-rgb), 0.2);
+                  }
                 }
               }
             }
@@ -1640,6 +1656,33 @@ main {
       top: 6px;
       left: 0;
       padding-top: 16px;
+    }
+  }
+}
+
+.whatsapp-suport {
+  background-color: transparent;
+  width: 56px;
+  height: 56px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 16px;
+  z-index: 30;
+
+  img {
+    width: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    transition: 0.3s;
+    filter: brightness(0.85);
+
+    &:hover {
+      transform: translate(-1px, -2px);
+    }
+
+    &:active {
+      transform: translate(1px, 2px);
     }
   }
 }
