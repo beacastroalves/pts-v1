@@ -5,28 +5,18 @@
 
 @media (min-width: 480px) {
   main {
-    section {
-      &#pts-one {
-        .pts-main-content {
-          .pts-one-text-container {
-            h1 {
-              font-size: 1.5em;
-            }
+    h1 {
+      font-size: 32px;
 
-            h3 {
-              font-size: 1.25em;
-            }
-          }
-        }
+      span {
+        font-size: 32px;
       }
+    }
 
+    section {
       &#pts-divisor {
         .pts-main-content {
           .pts-text-container {
-            h1 {
-              font-size: 1.5em;
-            }
-
             .cta-button {
               max-width: 500px;
             }
@@ -38,26 +28,14 @@
         .content-wrapper {
           max-width: 700px;
 
-          .heading {
-            .main-heading {
-              font-size: 2em;
-            }
-
-            .sub-heading {
-              font-size: 1.2em;
-            }
-          }
-
           .problem-list-card {
             .bullet-list {
               padding: 0 24px 24px 24px;
               gap: 20px;
 
               li {
-                font-size: 1.05em;
                 padding: 20px 24px;
                 padding-left: 60px
-
               }
 
               li::before {
@@ -85,25 +63,32 @@
 
 @media (min-width: 768px) {
   main {
+    h1 {
+      font-size: 36px;
+
+      span {
+        font-size: 36px;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    li, p {
+      font-size: 16px;
+    }
+
     section {
       &#pts-one {
         padding: 48px 40px 0;
         .pts-main-content {
           .pts-one-text-container {
-            h1 {
-              font-size: 1.75em;
-            }
-
-            h2 {
-              font-size: 1.375em;
-            }
-
-            h3 {
-              font-size: 1.375em;
-            }
-
             ul {
-              font-size: 1em;
               flex-direction: row;
               justify-content: center;
             }
@@ -135,12 +120,10 @@
             margin-bottom: 60px;
 
             .main-heading {
-              font-size: 2em;
               margin-bottom: 24px;
             }
 
             .sub-heading {
-              font-size: 1.25em;
               margin-bottom: 16px;
             }
           }
@@ -153,7 +136,6 @@
             overflow: hidden;
 
             .card-heading {
-              font-size: 1.5em;
               margin-bottom: 24px;
               padding: 20px 30px;
               border-top-left-radius: 20px;
@@ -166,7 +148,6 @@
             }
 
             .bullet-list li {
-              font-size: 1.125em;
               padding: 20px 30px;
               border-radius: 12px;
               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -189,10 +170,6 @@
       }
 
       &#timeline-section {
-        h2 {
-            font-size: 2.5em;
-        }
-
         .timeline-container {
           .timeline-wrapper {
             padding: 0;
@@ -256,12 +233,10 @@
           .target-audience-text {
             flex: 1;
             h1 {
-              font-size: 2em;
               margin-bottom: 24px;
             }
 
             h3 {
-              font-size: 1.125em;
               margin-bottom: 16px;
             }
 
@@ -270,7 +245,6 @@
             }
 
             ul li {
-              font-size: 1.125em;
               padding-left: 40px;
             }
           }
@@ -288,10 +262,6 @@
           .benefits-text-container {
             flex: 1;
             padding: 0;
-
-            h1 {
-              font-size: 2em;
-            }
           }
 
           .speakers-photos-container {
@@ -316,10 +286,6 @@
 
       &#testimonials-section {
         padding: 100px 40px 160px;
-
-        .testimonials-header h1 {
-          font-size: 2em;
-        }
 
         .testimonial-slider {
           flex-direction: column;
@@ -381,24 +347,6 @@
               left: 40px;
               padding: 15px 20px;
             }
-
-            .reviewer-photo {
-              width: 80px;
-              height: 80px;
-            }
-
-            .reviewer-name {
-              font-size: 1.2em;
-            }
-
-            .rating-stars {
-              font-size: 1em;
-            }
-
-            .testimonial-text {
-              font-size: 1.1em;
-              margin-top: 60px;
-            }
           }
         }
       }
@@ -410,17 +358,14 @@
           padding: 0 16px;
 
           h1 {
-            font-size: 2em;
-            margin-bottom: 25px;
+            margin-bottom: 24px;
           }
 
           h3 {
-            font-size: 1.4em;
             margin-bottom: 30px;
           }
 
           p {
-            font-size: 1.2em;
             margin-bottom: 40px;
           }
         }
@@ -436,20 +381,17 @@
 
         .pricing-header {
           .main-title {
-            font-size: 2.8em;
-          }
-          .subtitle {
-            font-size: 1.5em;
+            font-size: 40px;
           }
         }
 
         .price-offer-card {
           padding: 40px;
           max-width: 500px;
-          gap: 25px;
+          gap: 24px;
 
           .current-price .installments {
-            font-size: 3.5em;
+            font-size: 56px;
           }
         }
       }
@@ -459,9 +401,32 @@
 
 @media (min-width: 1024px) {
   main {
+    h1 {
+      font-size: 30px;
+      text-transform: uppercase;
+
+      span {
+        font-size: 30px;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+
+    li, p {
+      font-size: 16px;
+    }
+
     section {
       &#pts-one {
         padding: 48px 40px 80px;
+        height: 100vh;
+
         .pts-main-content {
           flex-direction: row;
           align-items: center;
@@ -472,13 +437,8 @@
             gap: 16px;
             flex: 1;
 
-            h1 {
-              font-size: 30px;
-            }
-
             ul {
               justify-content: flex-start;
-              font-size: 1.125em;
             }
           }
 
@@ -500,7 +460,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 64px;
+          gap: 48px;
           max-width: 1080px;
 
           .heading {
@@ -509,12 +469,11 @@
             margin-bottom: 0;
 
             .main-heading {
-              font-size: 2.25em;
+              font-size: 36px;
               margin-bottom: 24px;
             }
 
             .sub-heading {
-              font-size: 1.375em;
               margin-bottom: 16px;
             }
           }
@@ -543,12 +502,10 @@
           .pts-text-container {
             align-items: flex-start;
             h1 {
-              font-size: 2.25em;
               text-align: left;
             }
 
             h3 {
-              font-size: 1.375em;
               padding: 16px 24px;
               text-align: center;
             }
@@ -578,12 +535,7 @@
           align-items: center;
           gap: 64px;
 
-          h1 {
-            font-size: 2.25em;
-          }
-
           h3 {
-            font-size: 1.25em;
             margin-bottom: 20px;
           }
 
@@ -592,7 +544,6 @@
           }
 
           ul li {
-            font-size: 1.2em;
             margin-bottom: 20px;
             padding-left: 40px;
           }
@@ -612,22 +563,14 @@
       &#benefits-section {
         .benefits-content {
           .benefits-text-container {
-            h1 {
-              font-size: 2.25em;
-            }
-
             ul li {
-              font-size: 1.25em;
+              font-size: 20px;
             }
           }
         }
       }
 
       &#testimonials-section {
-        .testimonials-header h1 {
-          font-size: 2.25em;
-        }
-
         .testimonial-slider {
           .testimonial-card {
             min-height: 300px;
@@ -635,25 +578,12 @@
             .reviewer-info {
               top: -30px;
               left: 50px;
-              padding: 20px 25px;
+              padding: 20px 24px;
             }
 
             .reviewer-photo {
               width: 90px;
               height: 90px;
-            }
-
-            .reviewer-name {
-              font-size: 1.3em;
-            }
-
-            .rating-stars {
-              font-size: 1.1em;
-            }
-
-            .testimonial-text {
-              font-size: 1.2em;
-              margin-top: 70px;
             }
           }
         }
@@ -677,17 +607,14 @@
           text-align: left;
 
           h1 {
-            font-size: 3.2em;
             margin-bottom: 30px;
           }
 
           h3 {
-            font-size: 1.375em;
             margin-bottom: 35px;
           }
 
           p {
-            font-size: 1.25em;
             margin-bottom: 45px;
           }
         }
@@ -716,10 +643,7 @@
           margin-bottom: 0;
 
           .main-title {
-            font-size: 3em;
-          }
-          .subtitle {
-            font-size: 1.8em;
+            font-size: 48px;
           }
         }
 
@@ -731,7 +655,7 @@
           padding: 50px;
 
           .current-price .installments {
-            font-size: 4em;
+            font-size: 56px;
           }
         }
       }
@@ -742,8 +666,31 @@
 
 @media (min-width: 1200px) {
   main {
+    h1 {
+      font-size: 36px;
+
+      span {
+        font-size: 36px;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    li, p {
+      font-size: 16px;
+    }
+
     section {
       &#pts-one {
+        ul {
+          justify-content: flex-start;
+        }
         .pts-main-content {
           flex-direction: row;
           align-items: center;
@@ -752,10 +699,6 @@
 
           .pts-one-text-container {
             padding: 0;
-
-            h1 {
-              font-size: 36px;
-            }
 
             .cta-button {
               max-width: 100%;
@@ -772,19 +715,13 @@
       &#pts {
         .pts-content-wrapper {
           .pts-text-container {
-            h1 {
-              font-size: 2.25em;
-            }
-
             h3 {
-              font-size: 1.375em;
               padding: 16px 24px;
               text-align: center;
             }
           }
         }
       }
-
     }
   }
 }
