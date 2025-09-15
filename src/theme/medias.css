@@ -58,6 +58,12 @@
       }
     }
   }
+
+  footer {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
 }
 
 
@@ -80,7 +86,7 @@
     }
 
     li, p {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     section {
@@ -350,12 +356,6 @@
       &#pricing-section {
         padding: 80px 40px;
 
-        .pricing-header {
-          .main-title {
-            font-size: 40px;
-          }
-        }
-
         .price-offer-card {
           padding: 40px;
           max-width: 500px;
@@ -373,11 +373,10 @@
 @media (min-width: 1024px) {
   main {
     h1 {
-      font-size: 30px;
-      text-transform: uppercase;
+      font-size: 32px;
 
       span {
-        font-size: 30px;
+        font-size: 32px;
       }
     }
 
@@ -603,7 +602,7 @@
           text-align: left;
 
           h1 {
-            margin-bottom: 30px;
+            margin-bottom: 32px;
           }
 
           h3 {
@@ -639,7 +638,7 @@
           margin-bottom: 0;
 
           .main-title {
-            font-size: 48px;
+            font-size: 36px;
           }
         }
 
@@ -679,7 +678,7 @@
     }
 
     li, p {
-      font-size: 16px;
+      font-size: 18px;
     }
 
     section {
@@ -715,6 +714,14 @@
               padding: 16px 24px;
               text-align: center;
             }
+          }
+        }
+      }
+
+      &#pricing-section {
+        .pricing-header {
+          .main-title {
+            font-size: 40px;
           }
         }
       }
