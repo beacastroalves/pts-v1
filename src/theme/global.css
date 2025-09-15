@@ -265,6 +265,8 @@ main {
           padding-bottom: 24px;
           padding-top: 0;
           padding-right: 16px;
+          margin-bottom: 64px;
+          margin-top: 24px;
 
 
           .pts-bg {
@@ -310,7 +312,6 @@ main {
         background-color: transparent;
         background-image: url(/images/separator-v.png);
 
-
         &.top {
           top: -2px;
         }
@@ -339,10 +340,9 @@ main {
         background-repeat: repeat-x;
         height: 200px;
         width: 100%;
-        animation: pts-carousel-slide 40s linear infinite;
+        animation: pts-carousel-slide 90s linear infinite;
         display: block;
       }
-
 
       img.divider {
         display: none;
@@ -834,7 +834,7 @@ main {
           gap: 32px;
           align-items: center;
           width: 100%;
-          max-width: 500px;
+          max-width: 450px;
 
           .speaker-card {
             display: flex;
@@ -885,13 +885,14 @@ main {
             background-color: rgba(var(--app-color-3-rgb), 1);
             border-radius: 8px;
             width: 100%;
-            max-width: 500px;
+            max-width: 450px;
 
             .speakers-container {
               color: var(--app-color-2);
               display: flex;
               flex-direction: column;
               width: 100%;
+              max-height: 95dvh;
               background-color: rgba(var(--app-color-3-rgb), 1);
 
               .splide {
@@ -903,13 +904,16 @@ main {
                         display: flex;
                         flex-direction: column;
                         justify-content: flex-end;
+                        align-items: center;
                         background-color: rgba(var(--app-color-3-rgb), 1);
 
                         img {
                           width: 100%;
+                          max-width: 256px;
                           height: 100%;
                           object-fit: cover;
                           margin-top: 16px;
+                          border-radius: 8px;
                         }
 
                         .caption {
@@ -925,6 +929,7 @@ main {
 
                           p {
                             text-align: justify;
+                            font-size: 16px;
                           }
                         }
                       }
