@@ -103,7 +103,7 @@
             }
           }
 
-          .pts-image-container {
+          .pts-one-image-container {
             margin-top: 24px;
           }
         }
@@ -411,14 +411,14 @@
             }
           }
 
-          .pts-image-container {
+          .pts-one-image-container {
             padding: 0;
             flex: 1;
             margin-right: 16px;
 
             img {
               border-radius: 16px;
-              box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+              /* box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3); */
             }
           }
         }
@@ -714,7 +714,7 @@
             }
           }
 
-          .pts-image-container {
+          .pts-one-image-container {
             flex: 1;
             border-radius: 20px;
           }
