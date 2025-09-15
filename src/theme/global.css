@@ -373,7 +373,7 @@ main {
           .card-heading {
             color: var(--app-color-2);
             background-color: var(--app-color-3);
-            padding: 16px 20px;
+            padding: 8px 16px;
             border-top-left-radius: 16px;
             border-top-right-radius: 16px;
             margin-bottom: 20px;
@@ -393,7 +393,7 @@ main {
               background-color: var(--app-color-3);
               border-radius: 10px;
               box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-              padding: 16px 20px;
+              padding: 8px 16px;
               border: 1px solid rgba(var(--app-color-1-rgb), 0.2);
 
               line-height: 1.6;
@@ -495,7 +495,7 @@ main {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 56px;
         align-items: center;
 
         .pts-text-container {
@@ -541,7 +541,7 @@ main {
 
         .pts-image-container {
           width: 100%;
-          max-width: 400px;
+          max-width: 700px;
           margin: 0 auto;
           display: flex;
           justify-content: center;
@@ -705,7 +705,7 @@ main {
             }
 
             li::before {
-              content: '▶︎';
+              content: '✸';
               color: var(--app-color-1);
               font-size: 20px;
               position: absolute;
@@ -1486,12 +1486,12 @@ main {
       text-align: center;
       position: relative;
 
-      article {
+      #faq {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: left;
-        gap: 16px;
+        gap: 32px;
         max-width: 600px;
         margin: 0 auto;
 
@@ -1512,7 +1512,15 @@ main {
               cursor: pointer;
 
               span {
+                font-style: italic;
                 text-transform: uppercase;
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+              }
+
+              small {
+                font-style: italic;
+                text-transform: uppercase;
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
               }
             }
 
