@@ -1335,7 +1335,7 @@ main {
       .cta-image-placeholder {
         width: 100%;
         max-width: 600px;
-        height: 400px;
+        height: fit-content;
         background-color: #cccccc;
         border-radius: 15px;
         display: flex;
