@@ -252,6 +252,12 @@
         padding: 64px 40px;
       }
 
+      &#event-info-section {
+        background-attachment: fixed;
+        background-size: 120%;
+        padding: 150px 8px;
+      }
+
       &#testimonials-section {
         padding: 100px 40px 160px;
 
@@ -421,7 +427,7 @@
           align-items: center;
           justify-content: center;
           gap: 48px;
-          max-width: 1080px;
+          max-width: 1200px;
 
           .heading {
             flex: 1;
@@ -605,7 +611,7 @@
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          gap: 80px;
+          gap: 60px;
           text-align: left;
         }
 
@@ -642,7 +648,7 @@
 
         .pricing-container {
           flex-direction: row;
-          gap: 60px;
+          /* gap: 60px; */
           width: 100%;
           max-width: 1200px;
         }
