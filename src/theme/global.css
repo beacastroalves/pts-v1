@@ -207,6 +207,16 @@ main {
             background-color: rgba(var(--app-color-3-rgb), 0.3);
           }
 
+          h3 {
+            .highlight {
+              font-weight: 800;
+            }
+          }
+
+          h3:last-child {
+            margin-bottom: 8px;
+          }
+
           ul {
             display: flex;
             flex-direction: column;
@@ -1063,12 +1073,11 @@ main {
         &.glass {
           background: rgba(0, 0, 0, 0.35);
           border-radius: 16px;
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
-          backdrop-filter: blur(8px);
-          --webkit-backdrop-filter: blur(8px);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.10);
+          backdrop-filter: blur(4px);
+          --webkit-backdrop-filter: blur(4px);
           border: 1px solid rgba(0, 0, 0, 0.1);
           padding: 60px 16px;
-          box-shadow: 10px 12px 25px 4px rgba(0, 0, 0, 0.15);
         }
       }
 
