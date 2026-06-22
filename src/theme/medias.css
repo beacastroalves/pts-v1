@@ -94,6 +94,11 @@
 
         .pts-main-content {
           .pts-one-text-container {
+            h3.bg {
+              padding: 16px 32px;
+              margin: 16px 0;
+            }
+
             ul {
               flex-direction: row;
               justify-content: center;

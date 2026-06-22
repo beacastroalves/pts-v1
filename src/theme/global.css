@@ -153,7 +153,7 @@ main {
       justify-content: center;
       align-items: center;
       min-height: 80vh;
-      padding: 64px 0 0;
+      padding: 40px 0 0;
       position: relative;
 
       .pts-main-content {
@@ -198,6 +198,20 @@ main {
               padding: 0 4px;
             }
           }
+
+          h3.bg {
+            padding: 8px 16px;
+            margin: 8px 0;
+            /* border: 1px solid var(--app-color-2); */
+            border-radius: 8px;
+            color: var(--app-color-2);
+            opacity: 0.9;
+            line-height: 1.5;
+            background-color: rgba(var(--app-color-1-rgb), 0.85);
+            padding: 16px;
+            border-radius: 16px;
+          }
+
 
           h3 {
             color: var(--app-color-2);
@@ -1705,8 +1719,8 @@ main {
   width: 56px;
   height: 56px;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: -10px;
+  right: -10px;
   margin: 16px;
   z-index: 30;
 
